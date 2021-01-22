@@ -72,15 +72,28 @@ console.log(result);
 
 //4.Mega Friend
 
-var names= ['Shamuel', 'Asif', 'fdijifjidjd','Nayeem','PUBG'];
-var max =names[0];
-for(var i=0;i<names.length;i++)
-{
-    var elements =names[i];
-    if(elements>max)
-    {
-        max =elements;
-    }
 
+
+function megaFriend(names)
+{
+
+    var max =names[0].length;
+    var maxName=names[0];
+    for(var i=0;i<names.length;i++)
+    {
+        
+
+        var elements =names[i].length;
+        if(elements>max)
+        {
+            maxName=names[i];
+            max =elements;
+        }
+       
+
+    }
+    return maxName;
 }
-console.log(max);
+var names= ['Shamuel', 'Asif','Asiferdaaaaaab','Nayeem','PUBG'];
+var result=megaFriend(names);
+console.log(result);
